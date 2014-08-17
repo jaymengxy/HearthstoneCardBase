@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/hs_bg"
+        >
+
+    <Button
+            android:id="@+id/findByHero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="根据职业查看"
+            android:background="@drawable/hs_indexbutton"
+            android:onClick="findByHero"
+            />
+    <Button
+            android:id="@+id/findByCosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="根据消耗查看"
+            android:layout_alignLeft="@id/findByHero"
+            android:layout_above="@id/findByHero"
+            android:background="@drawable/hs_indexbutton"
+            android:onClick="findByCosts"
+            />
+    <Button
+            android:id="@+id/findByQuality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/findByHero"
+            android:layout_below="@id/findByHero"
+            android:text="根据品质查看"
+            android:background="@drawable/hs_indexbutton"
+            android:onClick="findByQuality"
+            />
+    <Button
+            android:id="@+id/findByType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="根据类型查看"
+            android:layout_alignLeft="@id/findByHero"
+            android:layout_above="@id/findByCosts"
+            android:background="@drawable/hs_indexbutton"
+            android:onClick="findByType"
+            />
+    <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/findByHero"
+            android:src="@drawable/hs_indeximage"
+            />
+</RelativeLayout>
+
