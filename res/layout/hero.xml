@@ -7,6 +7,7 @@
 
     <LinearLayout
             android:id="@+id/ll_One"
+
             android:layout_centerInParent="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -30,22 +31,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/heroName_style"
                     android:text="雷克萨"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
-                    />
+                    android:textStyle="bold"/>
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+
+                    style="@style/heroName_style"
                     android:text="(猎人)"
-                    android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
-                    />
+                    android:textSize="11sp"/>
 
         </LinearLayout>
 
@@ -66,21 +60,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/heroName_style"
                     android:text="萨尔"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/heroName_style"
                     android:text="(萨满祭司)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
                     />
 
         </LinearLayout>
@@ -102,21 +90,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="乌瑟尔"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(圣骑士)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
@@ -138,21 +120,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/heroName_style"
                     android:text="吉安娜"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(法师)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
@@ -175,29 +151,22 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="加尔鲁什"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(战士)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
 
 
-
     </LinearLayout>
-<!-- 第二行 -->
+    <!-- 第二行 -->
     <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -206,6 +175,7 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             >
+
         <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
@@ -222,21 +192,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="玛法里奥"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(德鲁伊)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
@@ -257,21 +221,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="古尔丹"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(术士)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
@@ -292,21 +250,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="安杜因"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(牧师)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
@@ -327,21 +279,15 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="瓦莉拉"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(潜行者)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
@@ -362,23 +308,24 @@
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="中立阵营"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="(其他)"
                     android:textSize="11sp"
-                    android:textColor="@android:color/black"
-                    android:gravity="center"
+                    style="@style/heroName_style"
                     />
 
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+            android:id="@+id/iv_garrosh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/garrosh"
+            />
 </RelativeLayout>

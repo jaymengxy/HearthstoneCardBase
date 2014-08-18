@@ -5,6 +5,7 @@
               android:background="@drawable/hs_bg"
         >
 
+
     <Button
             android:id="@+id/findByHero"
             android:layout_width="wrap_content"
@@ -13,6 +14,7 @@
             android:text="根据职业查看"
             android:background="@drawable/hs_indexbutton"
             android:onClick="findByHero"
+            android:textColor="@android:color/black"
             />
     <Button
             android:id="@+id/findByCosts"
@@ -23,6 +25,7 @@
             android:layout_above="@id/findByHero"
             android:background="@drawable/hs_indexbutton"
             android:onClick="findByCosts"
+            android:textColor="@android:color/black"
             />
     <Button
             android:id="@+id/findByQuality"
@@ -33,6 +36,7 @@
             android:text="根据品质查看"
             android:background="@drawable/hs_indexbutton"
             android:onClick="findByQuality"
+            android:textColor="@android:color/black"
             />
     <Button
             android:id="@+id/findByType"
@@ -40,9 +44,10 @@
             android:layout_height="wrap_content"
             android:text="根据类型查看"
             android:layout_alignLeft="@id/findByHero"
-            android:layout_above="@id/findByCosts"
+            android:layout_below="@id/findByQuality"
             android:background="@drawable/hs_indexbutton"
             android:onClick="findByType"
+            android:textColor="@android:color/black"
             />
     <ImageView
             android:layout_centerVertical="true"
@@ -51,6 +56,12 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/findByHero"
             android:src="@drawable/hs_indeximage"
+            />
+    <ImageView
+            android:id="@+id/iv_startImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/startimage"
             />
 </RelativeLayout>
 
