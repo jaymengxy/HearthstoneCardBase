@@ -12,11 +12,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
+
     private ImageView iv;
     private AlphaAnimation aa;
     private ScaleAnimation sa;
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +23,7 @@ public class MainActivity extends Activity {
         iv = (ImageView) findViewById(R.id.iv_startImage);
         sa = new ScaleAnimation(1, 2, 1, 2, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
-        sa.setDuration(3000);
+        sa.setDuration(2000);
         sa.setFillAfter(true);
         iv.startAnimation(sa);
 
@@ -45,8 +44,6 @@ public class MainActivity extends Activity {
 
             }
         });
-
-
     }
 
 

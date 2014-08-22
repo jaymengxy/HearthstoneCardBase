@@ -1,11 +1,13 @@
 package com.mxy.hearthstone;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.mxy.hearthstone.hero.Warrior;
 
 /**
  * Created by SinTi on 2014/8/17.
@@ -51,6 +53,9 @@ public class HeroSelect extends Activity{
 
     public void showWarriorCards(View view) {
         Toast.makeText(this,"展示战士卡牌",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, Warrior.class);
+        startActivity(intent);
     }
 
     public void showDruidCards(View view) {
