@@ -15,23 +15,12 @@ import com.mxy.hearthstone.hero.Warrior;
  */
 public class HeroSelect extends Activity{
 
-    private ImageView iv;
-    private AlphaAnimation aa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero);
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        iv = (ImageView) findViewById(R.id.iv_garrosh);
-        aa = new AlphaAnimation(1, 0); // 指定从显示到隐藏
-        aa.setDuration(6000);
-        aa.setFillAfter(true); // 指定动画停留在动画结束的状态下
-        iv.startAnimation(aa);
     }
 
     public void showHunterCards(View view) {
@@ -52,7 +41,6 @@ public class HeroSelect extends Activity{
     }
 
     public void showWarriorCards(View view) {
-        Toast.makeText(this,"展示战士卡牌",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent();
         intent.setClass(this, Warrior.class);
         startActivity(intent);
