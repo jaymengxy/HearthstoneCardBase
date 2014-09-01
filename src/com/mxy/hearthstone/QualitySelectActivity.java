@@ -7,7 +7,7 @@ import android.os.Bundle;
  * Created by SinTi on 2014/8/17.
  * 选择品质
  */
-public class QualitySelect extends Activity{
+public class QualitySelectActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

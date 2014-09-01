@@ -4,16 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.widget.ImageView;
 import android.widget.Toast;
-import com.mxy.hearthstone.hero.Warrior;
+import com.mxy.hearthstone.hero.WarriorActivity;
 
 /**
  * Created by SinTi on 2014/8/17.
  * 选择英雄
  */
-public class HeroSelect extends Activity{
+public class HeroSelectActivity extends Activity{
 
 
     @Override
@@ -42,7 +40,7 @@ public class HeroSelect extends Activity{
 
     public void showWarriorCards(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, Warrior.class);
+        intent.setClass(this, WarriorActivity.class);
         startActivity(intent);
     }
 

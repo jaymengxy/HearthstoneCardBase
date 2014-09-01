@@ -5,12 +5,13 @@ import android.os.Bundle;
 
 /**
  * Created by SinTi on 2014/8/17.
- * 选择消耗
+ * 选择类型
  */
-public class CostsSelect extends Activity{
+public class TypeSelectActivity extends Activity{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.costs);
+        setContentView(R.layout.type);
     }
 }

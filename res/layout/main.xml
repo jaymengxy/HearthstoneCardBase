@@ -1,58 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:background="@drawable/hs_bg"-->
-<!-->-->
 
-
-<!--<Button-->
-<!--style="@style/indexbutton_style"-->
-<!--android:id="@+id/findByHero"-->
-<!--android:layout_centerVertical="true"-->
-<!--android:text="根据职业查看"-->
-<!--android:onClick="findByHero"-->
-<!--/>-->
-<!--<Button-->
-<!--android:id="@+id/findByCosts"-->
-<!--style="@style/indexbutton_style"-->
-<!--android:text="根据消耗查看"-->
-<!--android:layout_alignLeft="@id/findByHero"-->
-<!--android:layout_above="@id/findByHero"-->
-<!--android:onClick="findByCosts"-->
-<!--/>-->
-<!--<Button-->
-<!--style="@style/indexbutton_style"-->
-<!--android:id="@+id/findByQuality"-->
-<!--android:layout_alignLeft="@id/findByHero"-->
-<!--android:layout_below="@id/findByHero"-->
-<!--android:text="根据品质查看"-->
-<!--android:onClick="findByQuality"-->
-<!--/>-->
-<!--<Button-->
-<!--style="@style/indexbutton_style"-->
-<!--android:id="@+id/findByType"-->
-<!--android:text="根据类型查看"-->
-<!--android:layout_alignLeft="@id/findByHero"-->
-<!--android:layout_below="@id/findByQuality"-->
-<!--android:onClick="findByType"-->
-<!--/>-->
-<!--<ImageView-->
-<!--android:layout_centerVertical="true"-->
-<!--android:layout_alignParentRight="true"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:layout_toRightOf="@id/findByHero"-->
-<!--android:src="@drawable/hs_indeximage"-->
-<!--/>-->
-<!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;android:id="@+id/iv_startImage"&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;android:background="@drawable/startimage"&ndash;&gt;-->
-<!--&lt;!&ndash;/>&ndash;&gt;-->
-
-<!--</RelativeLayout>-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -77,16 +24,6 @@
                     android:text="根据职业查看"
                     android:onClick="findByHero"
                     />
-
-            <Button
-                    android:id="@+id/findByCosts"
-                    style="@style/indexbutton_style"
-                    android:text="根据消耗查看"
-                    android:layout_alignLeft="@id/findByHero"
-                    android:layout_above="@id/findByHero"
-                    android:onClick="findByCosts"
-                    />
-
             <Button
                     style="@style/indexbutton_style"
                     android:id="@+id/findByQuality"
@@ -101,7 +38,7 @@
                     android:id="@+id/findByType"
                     android:text="根据类型查看"
                     android:layout_alignLeft="@id/findByHero"
-                    android:layout_below="@id/findByQuality"
+                    android:layout_above="@id/findByHero"
                     android:onClick="findByType"
                     />
 

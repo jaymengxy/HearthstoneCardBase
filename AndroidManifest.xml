@@ -18,10 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".HeroSelect"/>
-        <activity android:name=".CostsSelect"/>
-        <activity android:name=".QualitySelect"/>
-        <activity android:name=".TypeSelect"/>
-        <activity android:name=".hero.Warrior"/>
+        <activity android:name=".HeroSelectActivity"/>
+        <activity android:name=".QualitySelectActivity"/>
+        <activity android:name=".TypeSelectActivity"/>
+        <activity android:name=".hero.WarriorActivity"/>
     </application>
 </manifest>

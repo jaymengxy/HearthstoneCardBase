@@ -13,10 +13,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by SinTi on 2014/8/18.
+ *
  * 战士
  */
-public class Warrior extends Activity {
+public class WarriorActivity extends Activity {
     private ImageView iv;
     private AlphaAnimation aa;
 

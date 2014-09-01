@@ -6,10 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -49,25 +47,19 @@ public class MainActivity extends Activity {
 
     public void findByHero(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, HeroSelect.class);
-        startActivity(intent);
-    }
-
-    public void findByCosts(View view) {
-        Intent intent = new Intent();
-        intent.setClass(this, CostsSelect.class);
+        intent.setClass(this, HeroSelectActivity.class);
         startActivity(intent);
     }
 
     public void findByQuality(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, QualitySelect.class);
+        intent.setClass(this, QualitySelectActivity.class);
         startActivity(intent);
     }
 
     public void findByType(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, TypeSelect.class);
+        intent.setClass(this, TypeSelectActivity.class);
         startActivity(intent);
     }
 }
