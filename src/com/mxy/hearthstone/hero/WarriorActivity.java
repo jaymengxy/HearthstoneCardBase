@@ -5,7 +5,11 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import com.mxy.hearthstone.R;
 
@@ -19,6 +23,7 @@ import java.io.InputStream;
 public class WarriorActivity extends Activity {
     private ImageView iv;
     private AlphaAnimation aa;
+    private GridView gv_cards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,25 +38,9 @@ public class WarriorActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-        ImageView iv_top_right = (ImageView) findViewById(R.id.iv_top_right);
-        ImageView iv_top_left = (ImageView) findViewById(R.id.iv_top_left);
-        ImageView iv_mid_left = (ImageView) findViewById(R.id.iv_mid_left);
-        ImageView iv_mid_right = (ImageView) findViewById(R.id.iv_mid_right);
-        ImageView iv_bottom_left = (ImageView) findViewById(R.id.iv_bottom_left);
-        ImageView iv_bottom_right = (ImageView) findViewById(R.id.iv_bottom_right);
-        AssetManager am = getAssets();
-        try {
-            InputStream is = am.open("Warrior/Brawl.png");
-            Bitmap bm = BitmapFactory.decodeStream(is);
-            iv_top_left.setImageBitmap(bm);
-            iv_top_right.setImageBitmap(bm);
-            iv_mid_left.setImageBitmap(bm);
-            iv_mid_right.setImageBitmap(bm);
-            iv_bottom_left.setImageBitmap(bm);
-            iv_bottom_right.setImageBitmap(bm);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        gv_cards = (GridView) findViewById(R.id.gv_cards);
+        gv_cards.setAdapter(new WarriorAdapter());
+
     }
 
     @Override
@@ -62,5 +51,38 @@ public class WarriorActivity extends Activity {
         aa.setDuration(7000);
         aa.setFillAfter(true); // 指定动画停留在动画结束的状态下
         iv.startAnimation(aa);
+    }
+
+    private class WarriorAdapter extends BaseAdapter{
+
+        @Override
+        public int getCount() {
+            return 6;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = View.inflate(WarriorActivity.this, R.layout.cards_item, null);
+            ImageView iv_card = (ImageView) view.findViewById(R.id.iv_card);
+            AssetManager am = getAssets();
+            try {
+                InputStream is = am.open("Warrior/Brawl.png");
+                Bitmap bm = BitmapFactory.decodeStream(is);
+                iv_card.setImageBitmap(bm);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return view;
+        }
     }
 }
