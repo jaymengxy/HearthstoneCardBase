@@ -2,6 +2,7 @@ package com.mxy.hearthstone;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -9,11 +10,17 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.zip.ZipInputStream;
+
 public class MainActivity extends Activity {
 
     private ImageView iv;
     private AlphaAnimation aa;
     private ScaleAnimation sa;
+    private Object zipFolderLock = new Object();
+    private SQLiteDatabase cardDb;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +49,9 @@ public class MainActivity extends Activity {
 
             }
         });
+
+        // 拷贝的位置 new File(getApplicationInfo().dataDir + "/db/data.db"
+
     }
 
 
