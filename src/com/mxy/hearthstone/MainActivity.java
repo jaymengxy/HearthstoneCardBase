@@ -9,6 +9,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+import com.mxy.hearthstone.utils.ZipUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -51,6 +52,54 @@ public class MainActivity extends Activity {
         });
 
         // 拷贝的位置 new File(getApplicationInfo().dataDir + "/db/data.db"
+        //ZipInputStream localZipInputStream = new ZipInputStream(HSApplication.this.getAssets().open("data.zip"));
+        //ZipUtil.decompress(new File(HSApplication.this.getApplicationInfo().dataDir + "/db/"), localZipInputStream);
+        copyDB("data.db");
+    }
+
+    /*
+    if (!new File(getApplicationInfo().dataDir + "/db/data.db").exists())
+      {
+        new Thread(new Runnable()
+        {
+          public void run()
+          {
+            try
+            {
+              synchronized (HSApplication.this.zipFolderLock)
+              {
+                try
+                {
+                  ZipInputStream localZipInputStream = new ZipInputStream(HSApplication.this.getAssets().open("data.zip"));
+                  ZipUtil.decompress(new File(HSApplication.this.getApplicationInfo().dataDir + "/db/"), localZipInputStream);
+                  SqliteDataQueryer.getInstance().openDbFileFromRes(HSApplication.this, HSApplication.this.getApplicationInfo().dataDir + "/db/data.db", 2131034112);
+                  HSApplication.this.cardDb = SQLiteDatabase.openOrCreateDatabase(HSApplication.this.getApplicationInfo().dataDir + "/db/data.db", null);
+                  return;
+                }
+                catch (IOException localIOException)
+                {
+                  while (true)
+                    localIOException.printStackTrace();
+                }
+              }
+            }
+            catch (Exception localException)
+            {
+              while (true)
+                localException.printStackTrace();
+            }
+          }
+        }).start();
+     */
+    private void copyDB(String dbname) {
+        try {
+            ZipInputStream localZipInputStream = new ZipInputStream(MainActivity.this.getAssets().open("data.zip"));
+            ZipUtil.decompress(new File(MainActivity.this.getApplicationInfo().dataDir +"/db/"), localZipInputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
