@@ -7,7 +7,6 @@ package com.mxy.hearthstone.domain;
  * 品质 quality String
  * 消耗 costs int
  * 所属英雄 heroName String
- *
  */
 
 public class Card {

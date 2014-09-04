@@ -5,10 +5,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class CardsOpenHelper extends SQLiteOpenHelper{
+public class CardsOpenHelper extends SQLiteOpenHelper {
     public CardsOpenHelper(Context context) {
         super(context, "cards.db", null, 1);
     }
+
     /**
      * 创建表 cards
      * _id主键 自动增长
@@ -18,7 +19,6 @@ public class CardsOpenHelper extends SQLiteOpenHelper{
      * costs 消耗 integer(2)
      * heroName 所属英雄 varchar(20)
      * location 图片位置 varchar(100)
-     *
      */
     @Override
     public void onCreate(SQLiteDatabase db) {

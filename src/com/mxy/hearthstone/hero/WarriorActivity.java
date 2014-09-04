@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- *
  * 战士
  */
 public class WarriorActivity extends Activity {
@@ -53,7 +52,7 @@ public class WarriorActivity extends Activity {
         iv.startAnimation(aa);
     }
 
-    private class WarriorAdapter extends BaseAdapter{
+    private class WarriorAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {

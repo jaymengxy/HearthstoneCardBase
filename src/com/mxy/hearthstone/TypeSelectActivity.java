@@ -7,7 +7,7 @@ import android.os.Bundle;
  * Created by SinTi on 2014/8/17.
  * 选择类型
  */
-public class TypeSelectActivity extends Activity{
+public class TypeSelectActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

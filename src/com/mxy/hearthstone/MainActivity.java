@@ -2,18 +2,25 @@ package com.mxy.hearthstone;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+import com.mxy.hearthstone.utils.ZipUtil;
+
+import java.io.File;
+import java.util.zip.ZipInputStream;
 
 public class MainActivity extends Activity {
 
     private ImageView iv;
     private AlphaAnimation aa;
     private ScaleAnimation sa;
+    public SQLiteDatabase cardDb;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +49,29 @@ public class MainActivity extends Activity {
 
             }
         });
+        copyDB();
+    }
+
+    private void copyDB() {
+        if (!new File(getApplicationInfo().dataDir + "/db/data.db").exists()) {
+            new Thread() {
+                public void run() {
+                    try {
+                        /*File zipFile = new File("/db.zip");
+                        ZipUtil.upZipFile(zipFile,MainActivity.this.getApplicationInfo().dataDir + "/db/");
+                        File imgFile = new File("/images.zip");
+                        ZipUtil.upZipFile(imgFile,MainActivity.this.getApplicationInfo().dataDir + "/db/images/");*/
+                        ZipInputStream dbZipInputStream = new ZipInputStream(MainActivity.this.getAssets().open("db.zip"));
+                        ZipUtil.ectract(dbZipInputStream, MainActivity.this.getApplicationInfo().dataDir + "/db/");
+                        ZipInputStream imgZipInputStream = new ZipInputStream(MainActivity.this.getAssets().open("images.zip"));
+                        ZipUtil.ectract(imgZipInputStream, MainActivity.this.getApplicationInfo().dataDir + "/db/images/");
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+        }
     }
 
 

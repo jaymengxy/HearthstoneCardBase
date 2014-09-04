@@ -1,73 +1,40 @@
 package com.mxy.hearthstone.utils;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.zip.CRC32;
-import java.util.zip.CheckedInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 public class ZipUtil {
-    private static final int BUFFER = 1024;
-
-    public static void decompress(File paramFile) throws Exception {
-        decompress(paramFile, paramFile.getParent());
-    }
-
-    public static void decompress(File paramFile1, File paramFile2) throws Exception {
-        ZipInputStream localZipInputStream = new ZipInputStream(new CheckedInputStream(new FileInputStream(paramFile1), new CRC32()));
-        decompress(paramFile2, localZipInputStream);
-        localZipInputStream.close();
-    }
-
-    public static void decompress(File paramFile, String paramString) throws Exception {
-        decompress(paramFile, new File(paramString));
-    }
-
-    public static void decompress(File paramFile, ZipInputStream paramZipInputStream) throws Exception {
-        ZipEntry localZipEntry = paramZipInputStream.getNextEntry();
-        if (localZipEntry == null)
-            return;
-        File localFile = new File(paramFile.getPath() + File.separator + localZipEntry.getName());
-        fileProber(localFile);
-        if (localZipEntry.isDirectory())
-            localFile.mkdirs();
-        // 反编译有问题
-            decompressFile(localFile, paramZipInputStream);
-        while (true) {
-            paramZipInputStream.closeEntry();
-            break;
-        }
-    }
-
-    public static void decompress(String paramString) throws Exception {
-        decompress(new File(paramString));
-    }
-
-    public static void decompress(String paramString1, String paramString2) throws Exception {
-        decompress(new File(paramString1), paramString2);
-    }
-
-    private static void decompressFile(File paramFile, ZipInputStream paramZipInputStream) throws Exception {
-        BufferedOutputStream localBufferedOutputStream = new BufferedOutputStream(new FileOutputStream(paramFile));
-        byte[] arrayOfByte = new byte[1024];
-        while (true) {
-            int i = paramZipInputStream.read(arrayOfByte, 0, 1024);
-            if (i == -1) {
-                localBufferedOutputStream.close();
-                return;
+    public static void ectract(ZipInputStream zins, String sDestPath) {
+        try {
+            //            // 先指定压缩档的位置和档名，建立FileInputStream对象
+            //            FileInputStream fins = new FileInputStream(sZipPathFile);
+            //            // 将fins传入ZipInputStream中
+            //            ZipInputStream zins = new ZipInputStream(fins);
+            ZipEntry ze = null;
+            byte ch[] = new byte[8192];
+            while ((ze = zins.getNextEntry()) != null) {
+                File zfile = new File(sDestPath + ze.getName());
+                File fpath = new File(zfile.getParentFile().getPath());
+                if (ze.isDirectory()) {
+                    if (!zfile.exists())
+                        zfile.mkdirs();
+                    zins.closeEntry();
+                } else {
+                    if (!fpath.exists())
+                        fpath.mkdirs();
+                    FileOutputStream fouts = new FileOutputStream(zfile);
+                    int i;
+                    while ((i = zins.read(ch)) != -1)
+                        fouts.write(ch, 0, i);
+                    zins.closeEntry();
+                    fouts.close();
+                }
             }
-            localBufferedOutputStream.write(arrayOfByte, 0, i);
-        }
-    }
-
-    private static void fileProber(File paramFile) {
-        File localFile = paramFile.getParentFile();
-        if (!localFile.exists()) {
-            fileProber(localFile);
-            localFile.mkdir();
+            zins.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
