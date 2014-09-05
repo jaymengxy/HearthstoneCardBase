@@ -38,52 +38,75 @@
             android:layout_height="0dp">
 
         <LinearLayout
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
+                    android:background="@drawable/cost_all_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    />
+            <Button
+                    android:background="@drawable/cost_0_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
                     />
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="1"/>
+                    android:background="@drawable/cost_1_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="2"/>
+                    android:background="@drawable/cost_2_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="3"/>
+                    android:background="@drawable/cost_3_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="4"/>
+                    android:background="@drawable/cost_4_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="5"/>
+                    android:background="@drawable/cost_5_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
 
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="6"/>
+                    android:background="@drawable/cost_6_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="7+"/>
+                    android:background="@drawable/cost_7plus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
         </LinearLayout>
 
         <fragment
@@ -92,7 +115,7 @@
                 android:layout_height="match_parent"
                 android:name="com.mxy.hearthstone.hero.CardsFragment"
                 android:id="@+id/cards_fragment"
-                android:layout_weight="8">
+                android:layout_weight="9">
 
         </fragment>
 
