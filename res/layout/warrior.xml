@@ -49,6 +49,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:layout_height="0dp"
+                    android:onClick="costAll"
                     />
             <Button
                     android:background="@drawable/cost_0_button"
@@ -56,6 +57,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:layout_height="0dp"
+                    android:onClick="cost0"
                     />
 
             <Button
@@ -63,35 +65,45 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost1"
+                    />
 
             <Button
                     android:background="@drawable/cost_2_button"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost2"
+                    />
 
             <Button
                     android:background="@drawable/cost_3_button"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost3"
+                    />
 
             <Button
                     android:background="@drawable/cost_4_button"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost4"
+                    />
 
             <Button
                     android:background="@drawable/cost_5_button"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost5"
+                    />
 
 
             <Button
@@ -99,14 +111,18 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost6"
+                    />
 
             <Button
                     android:background="@drawable/cost_7plus_button"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp"
+                    android:onClick="cost7plus"
+                    />
         </LinearLayout>
 
         <fragment

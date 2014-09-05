@@ -52,6 +52,42 @@ public class WarriorActivity extends Activity {
         iv.startAnimation(aa);
     }
 
+    // 全部卡牌
+    public void costAll(View view) {
+    }
+
+    // 消耗为0的卡牌
+    public void cost0(View view) {
+    }
+
+    // 消耗为1的卡牌
+    public void cost1(View view) {
+    }
+
+    // 消耗为2的卡牌
+    public void cost2(View view) {
+    }
+
+    // 消耗为3的卡牌
+    public void cost3(View view) {
+    }
+
+    // 消耗为4的卡牌
+    public void cost4(View view) {
+    }
+
+    // 消耗为5的卡牌
+    public void cost5(View view) {
+    }
+
+    // 消耗为6的卡牌
+    public void cost6(View view) {
+    }
+
+    // 消耗为7的卡牌
+    public void cost7plus(View view) {
+    }
+
     private class WarriorAdapter extends BaseAdapter {
 
         @Override
