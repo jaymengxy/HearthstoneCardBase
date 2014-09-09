@@ -3,31 +3,21 @@ package com.mxy.hearthstone.hero;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import com.mxy.hearthstone.R;
+import com.mxy.hearthstone.fragment.Fragment0;
 import com.mxy.hearthstone.fragment.FragmentAll;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * 战士
  */
 public class WarriorActivity extends Activity {
-    private ImageView iv;
-    private AlphaAnimation aa;
+    // private ImageView iv;
+    // private AlphaAnimation aa;
     private static String path = "/data/data/com.mxy.hearthstone/db/data.db";
     public static SQLiteDatabase db;
     @Override
@@ -36,6 +26,7 @@ public class WarriorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.warrior);
     }
+/*
 
     @Override
     protected void onStart() {
@@ -46,6 +37,7 @@ public class WarriorActivity extends Activity {
         aa.setFillAfter(true); // 指定动画停留在动画结束的状态下
         iv.startAnimation(aa);
     }
+*/
 
     @Override
     protected void onDestroy() {
@@ -76,6 +68,17 @@ public class WarriorActivity extends Activity {
     // 消耗为0的卡牌
     public void cost0(View view) {
         // warriorCards = CardsQueryDao.warriorCardsQuery(db, 0);
+        // 获得Fragment管理器对象
+        FragmentManager fm = getFragmentManager();
+
+        // 获得一个Fragment的事物对象
+        FragmentTransaction ft = fm.beginTransaction();
+
+        // 进行操作: 把Activity布局中的Fragment替换成FragmentAll
+        ft.replace(R.id.cards_fragment, new Fragment0());
+
+        // 把事物关闭
+        ft.commit();
     }
 
     // 消耗为1的卡牌

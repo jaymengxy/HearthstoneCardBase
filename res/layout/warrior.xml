@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:background="@drawable/cards_bg"
+              android:background="@drawable/hero_garrosh"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
             >
-    <RelativeLayout
+    <LinearLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
+            android:orientation="horizontal"
             android:layout_height="0dp">
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/title_bg"
-                android:layout_centerInParent="true"
+        <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="战士"
+                android:textSize="20sp"
+                android:textColor="#ffffa517"
+                android:gravity="right|center_vertical"
                 />
         <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Warrior"
-                android:gravity="center"
-                android:layout_centerInParent="true"
-                android:background="@android:color/transparent"
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="加尔鲁什•地狱咆哮"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:gravity="center_vertical"
                 />
-            </RelativeLayout>
+    </LinearLayout>
 
 
     <LinearLayout
             android:layout_weight="9"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_marginBottom="50dp"
             android:layout_height="0dp">
 
         <LinearLayout
@@ -125,23 +132,95 @@
                     />
         </LinearLayout>
 
-        <fragment
-                android:layout_gravity="center_horizontal"
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:name="com.mxy.hearthstone.fragment.FragmentAll"
                 android:id="@+id/cards_fragment"
+                android:orientation="vertical"
                 android:layout_weight="9">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="作为艾泽拉斯最强大的战士，加尔鲁什所带到场上的不仅有各种战斗兵器，大群嗜血的随从，还带来了一种愈战愈勇的战斗模式。这么说并不夸张——加尔鲁什的套牌能够在制造大量伤害的同时，将随从受到的伤害转化成让他们更加强大的力量。而当他那些浴血奋战的疯狂随从们在被召唤后就直接向你扑面而来的时候，可别被惊呆了。"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    />
+            <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/tv_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="英雄技能"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        />
+                <View
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_l"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="match_parent"
+                        android:background="@android:color/darker_gray"
+                        android:layout_height="1dp"/>
+            </RelativeLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:src="@drawable/ic_launcher"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="全副武装："
+                        android:textColor="#ffffa517"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        />
+                <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="获得2点护甲值"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        />
+                    </LinearLayout>
+            <View
+                    android:layout_marginTop="11sp"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/darker_gray"
+                    android:layout_height="1dp"/>
+            <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="特性简介"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:gravity="center|left"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="全副武装能每回合给自己叠加2护甲，敌人需要更多的输出来打破它们。加尔鲁什能号令麾下的勇士冲锋，也能斩杀受伤的弱者，更能利用自己的盾牌进行反击！并且，由于战士们都拥有熟练地使用武器的技巧，加尔鲁什能使用的武器，也是《炉石传说》中数量最多的！加尔鲁什甚至能召唤他的父亲——格罗玛什•地狱咆哮！在战士的怒吼中颤抖吧!"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    />
 
-        </fragment>
+        </LinearLayout>
 
     </LinearLayout>
 
     </LinearLayout>
-    <ImageView
-            android:id="@+id/iv_garrosh"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/garrosh"
-            />
 </RelativeLayout>
