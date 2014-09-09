@@ -129,7 +129,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:name="com.mxy.hearthstone.hero.CardsFragment"
+                android:name="com.mxy.hearthstone.fragment.FragmentAll"
                 android:id="@+id/cards_fragment"
                 android:layout_weight="9">
 

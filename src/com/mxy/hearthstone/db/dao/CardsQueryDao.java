@@ -12,7 +12,7 @@ public class CardsQueryDao {
 
 
     public static List<Card> warriorCardsQuery(SQLiteDatabase db, int cost) {
-        List<Card> cards = new ArrayList<Card>();
+        List<Card> warriorCards = new ArrayList<Card>();
         Cursor cursor;
         if (cost >= 0 && cost <= 6) {
             cursor = db.rawQuery("select * from cards where class = 'warrior' and cost = ?", new String[]{String.valueOf(cost)});
@@ -32,9 +32,9 @@ public class CardsQueryDao {
             card.setHeroName(cursor.getString(cursor.getColumnIndex("class")));
             card.setPicName(cursor.getString(cursor.getColumnIndex("code")));
             card.setQuality(cursor.getString(cursor.getColumnIndex("quality")));
-            cards.add(card);
+            warriorCards.add(card);
         }
         cursor.close();
-        return cards;
+        return warriorCards;
     }
 }
