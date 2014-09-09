@@ -15,6 +15,6 @@
             android:background="@android:color/transparent"
             >
 
-            </GridView>
+    </GridView>
 
 </LinearLayout>
