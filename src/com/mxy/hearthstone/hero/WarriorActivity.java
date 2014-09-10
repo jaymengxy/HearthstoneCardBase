@@ -7,10 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import com.mxy.hearthstone.R;
-import com.mxy.hearthstone.fragment.Fragment0;
-import com.mxy.hearthstone.fragment.FragmentAll;
+import com.mxy.hearthstone.fragment.*;
 
 /**
  * 战士
@@ -20,11 +21,13 @@ public class WarriorActivity extends Activity {
     // private AlphaAnimation aa;
     private static String path = "/data/data/com.mxy.hearthstone/db/data.db";
     public static SQLiteDatabase db;
+    private ScrollView sv_fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         db = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READONLY);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.warrior);
+        sv_fragment = (ScrollView) findViewById(R.id.sv_fragment);
     }
 /*
 
@@ -48,72 +51,50 @@ public class WarriorActivity extends Activity {
         }
     }
 
-    // 全部卡牌
-    public void costAll(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, -1);
+    public void costClick(View view) {
+        int id = view.getId();
         // 获得Fragment管理器对象
         FragmentManager fm = getFragmentManager();
 
         // 获得一个Fragment的事物对象
         FragmentTransaction ft = fm.beginTransaction();
 
-        // 进行操作: 把Activity布局中的Fragment替换成FragmentAll
-        ft.replace(R.id.cards_fragment, new FragmentAll());
+        switch (id) {
+            case R.id.bt_costAll:
+                // 进行操作: 把Activity布局中的Framelayout替换成FragmentAll
+                ft.replace(R.id.fl_fragment, new FragmentAll());
+                break;
+            case R.id.bt_cost0:
+                // 进行操作: 把Activity布局中的Fragment替换成FragmentAll
+                ft.replace(R.id.fl_fragment, new Fragment0());
+                break;
+            case R.id.bt_cost1:
+                ft.replace(R.id.fl_fragment, new Fragment1());
+                break;
+            case R.id.bt_cost2:
+                ft.replace(R.id.fl_fragment, new Fragment2());
+                break;
+            case R.id.bt_cost3:
+                ft.replace(R.id.fl_fragment, new Fragment3());
+                break;
+            case R.id.bt_cost4:
+                ft.replace(R.id.fl_fragment, new Fragment4());
+                break;
+            case R.id.bt_cost5:
+                ft.replace(R.id.fl_fragment, new Fragment5());
+                break;
+            case R.id.bt_cost6:
+                ft.replace(R.id.fl_fragment, new Fragment6());
+                break;
+            case R.id.bt_cost7plus:
+                ft.replace(R.id.fl_fragment, new Fragment7plus());
+                break;
 
+        }
+        sv_fragment.setVisibility(View.INVISIBLE);
         // 把事物关闭
         ft.commit();
 
-    }
-
-    // 消耗为0的卡牌
-    public void cost0(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 0);
-        // 获得Fragment管理器对象
-        FragmentManager fm = getFragmentManager();
-
-        // 获得一个Fragment的事物对象
-        FragmentTransaction ft = fm.beginTransaction();
-
-        // 进行操作: 把Activity布局中的Fragment替换成FragmentAll
-        ft.replace(R.id.cards_fragment, new Fragment0());
-
-        // 把事物关闭
-        ft.commit();
-    }
-
-    // 消耗为1的卡牌
-    public void cost1(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 1);
-    }
-
-    // 消耗为2的卡牌
-    public void cost2(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 2);
-    }
-
-    // 消耗为3的卡牌
-    public void cost3(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 3);
-    }
-
-    // 消耗为4的卡牌
-    public void cost4(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 4);
-    }
-
-    // 消耗为5的卡牌
-    public void cost5(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 5);
-    }
-
-    // 消耗为6的卡牌
-    public void cost6(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 6);
-    }
-
-    // 消耗为7的卡牌
-    public void cost7plus(View view) {
-        // warriorCards = CardsQueryDao.warriorCardsQuery(db, 7);
     }
 
 }
