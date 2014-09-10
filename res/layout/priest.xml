@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:background="@drawable/warrior_bg"
+                android:background="@drawable/priest_bg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -22,9 +22,9 @@
                     android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="战士"
+                    android:text="牧师"
                     android:textSize="20sp"
-                    android:textColor="#ffffa517"
+                    android:textColor="#ffd11aff"
                     android:gravity="right|center_vertical"
                     />
 
@@ -33,9 +33,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:text="加尔鲁什•地狱咆哮"
+                    android:text="安杜因•乌瑞恩"
                     android:textStyle="bold"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="28sp"
                     android:gravity="center_vertical"
                     />
@@ -168,8 +168,8 @@
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="作为艾泽拉斯最强大的战士，加尔鲁什所带到场上的不仅有各种战斗兵器，大群嗜血的随从，还带来了一种愈战愈勇的战斗模式。这么说并不夸张——加尔鲁什的套牌能够在制造大量伤害的同时，将随从受到的伤害转化成让他们更加强大的力量。而当他那些浴血奋战的疯狂随从们在被召唤后就直接向你扑面而来的时候，可别被惊呆了。"
-                                android:textColor="@android:color/darker_gray"
+                                android:text="我们知道你现在的想法：他是个牧师，那么他要如何击败我呢？就靠它的治疗技能？没错，安杜因的套牌中确实有许多强力而特别的治疗法术，然而他的暗影法术会立即让你大惊失色，然后，他能够使用诸如精神控制这样强大的控场法术击败你，而给于你最后一击的，可能还是你自己的随从。"
+                                android:textColor="@android:color/black"
                                 android:textSize="15sp"
                                 />
 
@@ -184,7 +184,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="英雄技能"
                                     android:textStyle="bold"
-                                    android:textColor="@android:color/white"
+                                    android:textColor="@android:color/black"
                                     android:textSize="23sp"
                                     android:gravity="center"
                                     />
@@ -194,7 +194,7 @@
                                     android:layout_toRightOf="@id/tv_l"
                                     android:layout_alignParentRight="true"
                                     android:layout_width="match_parent"
-                                    android:background="@android:color/darker_gray"
+                                    android:background="@android:color/holo_blue_light"
                                     android:layout_height="1dp"/>
                         </RelativeLayout>
 
@@ -213,8 +213,8 @@
                                     android:layout_weight="1"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:text="全副武装："
-                                    android:textColor="#ffffa517"
+                                    android:text="次级治疗术："
+                                    android:textColor="#ffd11aff"
                                     android:textSize="22sp"
                                     android:gravity="center"
                                     />
@@ -223,8 +223,8 @@
                                     android:layout_weight="1"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:textColor="@android:color/darker_gray"
-                                    android:text="获得2点护甲值"
+                                    android:textColor="@android:color/black"
+                                    android:text="恢复2点生命值"
                                     android:textSize="22sp"
                                     android:gravity="center"
                                     />
@@ -233,7 +233,7 @@
                         <View
                                 android:layout_marginTop="11sp"
                                 android:layout_width="match_parent"
-                                android:background="@android:color/darker_gray"
+                                android:background="@android:color/holo_blue_light"
                                 android:layout_height="1dp"/>
 
                         <TextView
@@ -242,7 +242,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="特性简介"
                                 android:textStyle="bold"
-                                android:textColor="@android:color/white"
+                                android:textColor="@android:color/black"
                                 android:textSize="23sp"
                                 android:gravity="center|left"
                                 />
@@ -250,8 +250,8 @@
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="全副武装能每回合给自己叠加2护甲，敌人需要更多的输出来打破它们。加尔鲁什能号令麾下的勇士冲锋，也能斩杀受伤的弱者，更能利用自己的盾牌进行反击！并且，由于战士们都拥有熟练地使用武器的技巧，加尔鲁什能使用的武器，也是《炉石传说》中数量最多的！加尔鲁什甚至能召唤他的父亲——格罗玛什•地狱咆哮！在战士的怒吼中颤抖吧!"
-                                android:textColor="@android:color/darker_gray"
+                                android:text="安度因的治疗能力十分强大，可以很好的保证自己和随从的存活。他能使用真言术：盾等卡牌来提高随从的生命上限，也能用群体驱散来沉默对手所有的随从，甚至能使用神圣新星来同时达到群体治疗和AOE的效果。但牧师们往往光影相生，如有必要，安度因也可以使用暗影天赋来进行战斗，将治疗天赋变为强大的进攻能力。 "
+                                android:textColor="@android:color/black"
                                 android:textSize="15sp"
                                 />
 

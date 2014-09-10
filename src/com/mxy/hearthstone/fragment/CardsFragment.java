@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import com.mxy.hearthstone.MainActivity;
 import com.mxy.hearthstone.R;
 import com.mxy.hearthstone.db.dao.CardsQueryDao;
 import com.mxy.hearthstone.domain.Card;
@@ -46,7 +47,7 @@ public class CardsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.cards_fragment, container,false);
-        cards = CardsQueryDao.cardsQuery(WarriorActivity.db,mHero, mCost);
+        cards = CardsQueryDao.cardsQuery(MainActivity.db, mHero, mCost);
         GridView gv_cards = (GridView) view.findViewById(R.id.gv_cards);
         // 取消GridView的点击效果
         gv_cards.setSelector(new ColorDrawable(Color.TRANSPARENT));

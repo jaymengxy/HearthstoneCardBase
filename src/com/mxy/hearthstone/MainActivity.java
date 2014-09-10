@@ -20,8 +20,12 @@ public class MainActivity extends Activity {
     private AlphaAnimation aa;
     private ScaleAnimation sa;
 
+    private static String path = "/data/data/com.mxy.hearthstone/db/data.db";
+    public static SQLiteDatabase db;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        db = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READONLY);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         copyDB();
@@ -96,5 +100,14 @@ public class MainActivity extends Activity {
         Intent intent = new Intent();
         intent.setClass(this, TypeSelectActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //关闭数据库
+        if (db != null) {
+            db.close();
+        }
     }
 }
