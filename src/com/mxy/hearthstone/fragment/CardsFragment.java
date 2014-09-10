@@ -1,6 +1,5 @@
 package com.mxy.hearthstone.fragment;
 
-
 import android.app.Fragment;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -20,33 +19,49 @@ import com.mxy.hearthstone.hero.WarriorActivity;
 import java.util.List;
 
 
-/**
- * 所有卡牌的Fragment
- */
-public class Fragment5 extends Fragment {
-    private List<Card> warriorCards;
+public class CardsFragment extends Fragment {
+    private int mCost = 0;
+    private String mHero = "";
+    private List<Card> cards;
     private String[] pics;
+
+
+    public static CardsFragment newInstance(String heroName, int cost) {
+        CardsFragment cf = new CardsFragment();
+
+        Bundle args = new Bundle();
+        args.putString("hero",heroName);
+        args.putInt("cost",cost);
+        cf.setArguments(args);
+        return cf;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mHero = getArguments().getString("hero", "warrior");
+        mCost = getArguments().getInt("cost",-1);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.cards_fragment, null);
-        warriorCards = CardsQueryDao.warriorCardsQuery(WarriorActivity.db, 5);
+        View view = inflater.inflate(R.layout.cards_fragment, container,false);
+        cards = CardsQueryDao.cardsQuery(WarriorActivity.db,mHero, mCost);
         GridView gv_cards = (GridView) view.findViewById(R.id.gv_cards);
         // 取消GridView的点击效果
         gv_cards.setSelector(new ColorDrawable(Color.TRANSPARENT));
         gv_cards.setAdapter(new WarriorAdapter());
-        pics = new String[warriorCards.size()];
-        for (int i = 0; i < warriorCards.size(); i++) {
-            pics[i] = warriorCards.get(i).getPicName();
+        pics = new String[cards.size()];
+        for (int i = 0; i < cards.size(); i++) {
+            pics[i] = cards.get(i).getPicName();
         }
 
         return view;
     }
-
     private class WarriorAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return warriorCards.size();
+            return cards.size();
         }
 
         @Override
@@ -65,7 +80,6 @@ public class Fragment5 extends Fragment {
             ImageView iv_card = (ImageView) view.findViewById(R.id.iv_card);
             Uri uri = Uri.parse("/data/data/com.mxy.hearthstone/db/images/" + pics[position]);
             iv_card.setImageURI(uri);
-
             return view;
         }
     }

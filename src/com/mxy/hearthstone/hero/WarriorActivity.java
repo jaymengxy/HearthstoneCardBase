@@ -58,36 +58,38 @@ public class WarriorActivity extends Activity {
 
         // 获得一个Fragment的事物对象
         FragmentTransaction ft = fm.beginTransaction();
-
+        CardsFragment cardsFragment = (CardsFragment) getFragmentManager().findFragmentById(R.id.fl_fragment);
         switch (id) {
             case R.id.bt_costAll:
                 // 进行操作: 把Activity布局中的Framelayout替换成FragmentAll
-                ft.replace(R.id.fl_fragment, new FragmentAll());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", -1));
+                // ft.replace(R.id.fl_fragment, new FragmentAll());
                 break;
             case R.id.bt_cost0:
                 // 进行操作: 把Activity布局中的Fragment替换成FragmentAll
-                ft.replace(R.id.fl_fragment, new Fragment0());
+                // ft.replace(R.id.fl_fragment, new Fragment0());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 0));
                 break;
             case R.id.bt_cost1:
-                ft.replace(R.id.fl_fragment, new Fragment1());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 1));
                 break;
             case R.id.bt_cost2:
-                ft.replace(R.id.fl_fragment, new Fragment2());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 2));
                 break;
             case R.id.bt_cost3:
-                ft.replace(R.id.fl_fragment, new Fragment3());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 3));
                 break;
             case R.id.bt_cost4:
-                ft.replace(R.id.fl_fragment, new Fragment4());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 4));
                 break;
             case R.id.bt_cost5:
-                ft.replace(R.id.fl_fragment, new Fragment5());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 5));
                 break;
             case R.id.bt_cost6:
-                ft.replace(R.id.fl_fragment, new Fragment6());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 6));
                 break;
             case R.id.bt_cost7plus:
-                ft.replace(R.id.fl_fragment, new Fragment7plus());
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("warrior", 7));
                 break;
 
         }

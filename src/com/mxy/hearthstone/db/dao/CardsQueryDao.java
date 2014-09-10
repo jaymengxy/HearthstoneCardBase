@@ -10,14 +10,14 @@ import java.util.List;
 
 public class CardsQueryDao {
 
-
+/*
     public static List<Card> warriorCardsQuery(SQLiteDatabase db, int cost) {
         List<Card> warriorCards = new ArrayList<Card>();
         Cursor cursor;
         if (cost >= 0 && cost <= 6) {
             cursor = db.rawQuery("select * from cards where class = 'warrior' and cost = ?", new String[]{String.valueOf(cost)});
         } else if (cost > 6) {
-            cursor = db.rawQuery("select * from cards where class = 'warrior' and cost > 6", null);
+            cursor = db.rawQuery("select * from cards where class = 'warrior' and cost > '6'", null);
 
         } else {
             cursor = db.rawQuery("select * from cards where class = 'warrior'", null);
@@ -36,5 +36,32 @@ public class CardsQueryDao {
         }
         cursor.close();
         return warriorCards;
+    }
+    */
+    public static List<Card> cardsQuery(SQLiteDatabase db,String heroName, int cost) {
+        List<Card> cards = new ArrayList<Card>();
+        Cursor cursor;
+        if (cost >= 0 && cost <= 6) {
+            cursor = db.rawQuery("select * from cards where class = ? and cost = ?",new String[]{heroName,String.valueOf(cost)});
+        } else if (cost > 6) {
+            cursor = db.rawQuery("select * from cards where class = ? and cost > '6'", new String[]{heroName});
+
+        } else {
+            cursor = db.rawQuery("select * from cards where class = ?", new String[]{heroName});
+        }
+        while (cursor.moveToNext()) {
+            Card card = new Card();
+            card.setCardName(cursor.getString(cursor.getColumnIndex("cardName")));
+            card.setCardType(cursor.getString(cursor.getColumnIndex("cardType")));
+            card.setCardEffect(cursor.getString(cursor.getColumnIndex("cardEffect")));
+            card.setCost(cursor.getInt(cursor.getColumnIndex("cost")));
+            card.setDescription(cursor.getString(cursor.getColumnIndex("description")));
+            card.setHeroName(cursor.getString(cursor.getColumnIndex("class")));
+            card.setPicName(cursor.getString(cursor.getColumnIndex("code")));
+            card.setQuality(cursor.getString(cursor.getColumnIndex("quality")));
+            cards.add(card);
+        }
+        cursor.close();
+        return cards;
     }
 }
