@@ -24,5 +24,6 @@
         <activity android:name=".TypeSelectActivity"/>
         <activity android:name=".hero.WarriorActivity"/>
         <activity android:name=".hero.PriestActivity"/>
+        <activity android:name=".hero.MageActivity"/>
     </application>
 </manifest>

@@ -18,3 +18,5 @@ HearthstoneCardBase
 - 首页
 - 按职业查看
   - 战士
+  - 牧师
+  - 法师

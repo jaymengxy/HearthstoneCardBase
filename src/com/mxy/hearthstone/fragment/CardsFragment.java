@@ -49,7 +49,7 @@ public class CardsFragment extends Fragment {
         GridView gv_cards = (GridView) view.findViewById(R.id.gv_cards);
         // 取消GridView的点击效果
         gv_cards.setSelector(new ColorDrawable(Color.TRANSPARENT));
-        gv_cards.setAdapter(new WarriorAdapter());
+        gv_cards.setAdapter(new CardAdapter());
         pics = new String[cards.size()];
         for (int i = 0; i < cards.size(); i++) {
             pics[i] = cards.get(i).getPicName();
@@ -57,7 +57,7 @@ public class CardsFragment extends Fragment {
 
         return view;
     }
-    private class WarriorAdapter extends BaseAdapter {
+    private class CardAdapter extends BaseAdapter {
         @Override
         public int getCount() {
             return cards.size();

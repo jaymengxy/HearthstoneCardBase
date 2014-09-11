@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import com.mxy.hearthstone.hero.MageActivity;
 import com.mxy.hearthstone.hero.PriestActivity;
 import com.mxy.hearthstone.hero.WarriorActivity;
 
@@ -37,7 +38,9 @@ public class HeroSelectActivity extends Activity {
     }
 
     public void showMageCards(View view) {
-        Toast.makeText(this, "展示法师卡牌", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, MageActivity.class);
+        startActivity(intent);
     }
 
     public void showWarriorCards(View view) {
