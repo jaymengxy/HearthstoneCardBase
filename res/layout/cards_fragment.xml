@@ -13,6 +13,7 @@
             android:layout_gravity="center"
             android:numColumns="2"
             android:background="@android:color/transparent"
+            android:verticalSpacing="10dp"
             >
 
     </GridView>

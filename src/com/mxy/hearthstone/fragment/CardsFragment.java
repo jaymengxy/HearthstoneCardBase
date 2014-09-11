@@ -8,9 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
+import android.widget.*;
 import com.mxy.hearthstone.MainActivity;
 import com.mxy.hearthstone.R;
 import com.mxy.hearthstone.db.dao.CardsQueryDao;
@@ -78,6 +76,18 @@ public class CardsFragment extends Fragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View view = View.inflate(getActivity(), R.layout.cards_item, null);
+            // view = LayoutInflater.from(getActivity()).inflate(R.layout.cards_item, null);
+            AbsListView.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,parent.getHeight()/3);
+            view.setLayoutParams(params);
+            /*View view;
+            if (convertView != null) {
+                view = convertView;
+            }else {
+                view = View.inflate(getActivity(), R.layout.cards_item, null);
+                // view = LayoutInflater.from(getActivity()).inflate(R.layout.cards_item, null);
+                AbsListView.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,parent.getHeight()/3);
+                view.setLayoutParams(params);
+            }*/
             ImageView iv_card = (ImageView) view.findViewById(R.id.iv_card);
             Uri uri = Uri.parse("/data/data/com.mxy.hearthstone/db/images/" + pics[position]);
             iv_card.setImageURI(uri);
