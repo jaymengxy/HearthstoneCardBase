@@ -75,23 +75,31 @@ public class CardsFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view = View.inflate(getActivity(), R.layout.cards_item, null);
-            // view = LayoutInflater.from(getActivity()).inflate(R.layout.cards_item, null);
-            AbsListView.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,parent.getHeight()/3);
-            view.setLayoutParams(params);
-            /*View view;
+//            View view = View.inflate(getActivity(), R.layout.cards_item, null);
+//            // view = LayoutInflater.from(getActivity()).inflate(R.layout.cards_item, null);
+//            AbsListView.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,parent.getHeight()/3);
+//            view.setLayoutParams(params);
+            View view;
+            ViewHolder viewHolder;
             if (convertView != null) {
                 view = convertView;
+                viewHolder = (ViewHolder) view.getTag();
             }else {
                 view = View.inflate(getActivity(), R.layout.cards_item, null);
                 // view = LayoutInflater.from(getActivity()).inflate(R.layout.cards_item, null);
-                AbsListView.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,parent.getHeight()/3);
-                view.setLayoutParams(params);
-            }*/
-            ImageView iv_card = (ImageView) view.findViewById(R.id.iv_card);
+                viewHolder = new ViewHolder();
+                viewHolder.iv_card = (ImageView) view.findViewById(R.id.iv_card);
+                view.setTag(viewHolder);
+            }
+            AbsListView.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,parent.getHeight()/3);
+            view.setLayoutParams(params);
             Uri uri = Uri.parse("/data/data/com.mxy.hearthstone/db/images/" + pics[position]);
-            iv_card.setImageURI(uri);
+            viewHolder.iv_card.setImageURI(uri);
             return view;
+        }
+
+        class ViewHolder {
+            ImageView iv_card;
         }
     }
 }
