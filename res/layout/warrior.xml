@@ -248,6 +248,7 @@
                                 />
 
                         <TextView
+                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="全副武装能每回合给自己叠加2护甲，敌人需要更多的输出来打破它们。加尔鲁什能号令麾下的勇士冲锋，也能斩杀受伤的弱者，更能利用自己的盾牌进行反击！并且，由于战士们都拥有熟练地使用武器的技巧，加尔鲁什能使用的武器，也是《炉石传说》中数量最多的！加尔鲁什甚至能召唤他的父亲——格罗玛什•地狱咆哮！在战士的怒吼中颤抖吧!"

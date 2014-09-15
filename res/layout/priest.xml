@@ -248,6 +248,7 @@
                                 />
 
                         <TextView
+                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="安度因的治疗能力十分强大，可以很好的保证自己和随从的存活。他能使用真言术：盾等卡牌来提高随从的生命上限，也能用群体驱散来沉默对手所有的随从，甚至能使用神圣新星来同时达到群体治疗和AOE的效果。但牧师们往往光影相生，如有必要，安度因也可以使用暗影天赋来进行战斗，将治疗天赋变为强大的进攻能力。 "

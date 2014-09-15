@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:background="@drawable/priest_bg"
+                android:background="@drawable/druid_bg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -22,9 +22,9 @@
                     android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="牧师"
+                    android:text="德鲁伊"
                     android:textSize="20sp"
-                    android:textColor="#ffd11aff"
+                    android:textColor="#ffac090d"
                     android:gravity="right|center_vertical"
                     />
 
@@ -33,7 +33,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:text="安杜因•乌瑞恩"
+                    android:text="玛法里奥•怒风"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
                     android:textSize="28sp"
@@ -168,7 +168,7 @@
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="我们知道你现在的想法：他是个牧师，那么他要如何击败我呢？就靠它的治疗技能？没错，安杜因的套牌中确实有许多强力而特别的治疗法术，然而他的暗影法术会立即让你大惊失色，然后，他能够使用诸如精神控制这样强大的控场法术击败你，而给于你最后一击的，可能还是你自己的随从。"
+                                android:text="对于玛法里奥来说，这款游戏是他展现德鲁伊多才多艺，无所不能的又一个舞台。他的许多法术可以从两种效果中选择一种进行施放，甚至他的随从都能够变身成为不同的形态来适应当时的需要。他能够加速法力值的增长，在资源上超越对手，然后施放强大的伤害性法术和清场技能，宛如一只巨熊横扫一切。"
                                 android:textColor="@android:color/black"
                                 android:textSize="15sp"
                                 />
@@ -213,8 +213,8 @@
                                     android:layout_weight="1"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:text="次级治疗术："
-                                    android:textColor="#ffd11aff"
+                                    android:text="变形术："
+                                    android:textColor="#ffac090d"
                                     android:textSize="22sp"
                                     android:gravity="center"
                                     />
@@ -224,7 +224,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:textColor="@android:color/black"
-                                    android:text="恢复2点生命值"
+                                    android:text="本回合+1攻击力，+1护甲值 "
                                     android:textSize="22sp"
                                     android:gravity="center"
                                     />
@@ -248,9 +248,10 @@
                                 />
 
                         <TextView
+                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="安度因的治疗能力十分强大，可以很好的保证自己和随从的存活。他能使用真言术：盾等卡牌来提高随从的生命上限，也能用群体驱散来沉默对手所有的随从，甚至能使用神圣新星来同时达到群体治疗和AOE的效果。但牧师们往往光影相生，如有必要，安度因也可以使用暗影天赋来进行战斗，将治疗天赋变为强大的进攻能力。 "
+                                android:text="变形术奠定了德鲁伊攻守兼备的优势，不仅能叠加护甲，还能每回合进行攻击。玛法里奥能使用自然的能量来治愈自己，也能召唤自然卫士来保卫他的领土。他能使用月火术和星火术来打击敌人，也能使用爪击和横扫让敌人知道激怒德鲁伊的后果。玛法里奥还能召唤他的恩师——塞纳留斯，与他并肩作战。"
                                 android:textColor="@android:color/black"
                                 android:textSize="15sp"
                                 />
