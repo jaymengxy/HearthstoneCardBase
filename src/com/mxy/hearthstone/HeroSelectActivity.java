@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import com.mxy.hearthstone.hero.DruidActivity;
 import com.mxy.hearthstone.hero.MageActivity;
 import com.mxy.hearthstone.hero.PriestActivity;
 import com.mxy.hearthstone.hero.WarriorActivity;
@@ -20,7 +21,7 @@ public class HeroSelectActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hero);
+        setContentView(R.layout.heros);
 
     }
 
@@ -50,7 +51,9 @@ public class HeroSelectActivity extends Activity {
     }
 
     public void showDruidCards(View view) {
-        Toast.makeText(this, "展示德鲁伊卡牌", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, DruidActivity.class);
+        startActivity(intent);
     }
 
     public void showWarlockCards(View view) {
@@ -67,7 +70,7 @@ public class HeroSelectActivity extends Activity {
         Toast.makeText(this, "展示潜行者卡牌", Toast.LENGTH_SHORT).show();
     }
 
-    public void showNeutralCards(View view) {
+    /*public void showNeutralCards(View view) {
         Toast.makeText(this, "展示中立卡牌", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 }

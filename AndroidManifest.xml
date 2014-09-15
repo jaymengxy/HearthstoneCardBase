@@ -25,5 +25,6 @@
         <activity android:name=".hero.WarriorActivity"/>
         <activity android:name=".hero.PriestActivity"/>
         <activity android:name=".hero.MageActivity"/>
+        <activity android:name=".hero.DruidActivity"/>
     </application>
 </manifest>
