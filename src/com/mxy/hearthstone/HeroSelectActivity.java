@@ -56,7 +56,9 @@ public class HeroSelectActivity extends Activity {
     }
 
     public void showWarlockCards(View view) {
-        Toast.makeText(this, "展示术士卡牌", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, WarlockActivity.class);
+        startActivity(intent);
     }
 
     public void showPriestCards(View view) {
