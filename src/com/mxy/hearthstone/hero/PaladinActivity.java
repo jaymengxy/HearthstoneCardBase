@@ -10,16 +10,16 @@ import com.mxy.hearthstone.R;
 import com.mxy.hearthstone.fragment.CardsFragment;
 
 /**
- * 德鲁伊
+ * 圣骑士
  */
-public class DruidActivity extends Activity {
-    // private ImageView iv;
-    // private AlphaAnimation aa;
+public class PaladinActivity extends Activity {
+
     private ScrollView sv_fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //db = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READONLY);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.druid);
+        setContentView(R.layout.paladin);
         sv_fragment = (ScrollView) findViewById(R.id.sv_fragment);
     }
 
@@ -34,34 +34,34 @@ public class DruidActivity extends Activity {
         switch (id) {
             case R.id.bt_costAll:
                 // 进行操作: 把Activity布局中的Framelayout替换成FragmentAll
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", -1));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", -1));
                 // ft.replace(R.id.fl_fragment, new FragmentAll());
                 break;
             case R.id.bt_cost0:
                 // 进行操作: 把Activity布局中的Fragment替换成FragmentAll
                 // ft.replace(R.id.fl_fragment, new Fragment0());
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 0));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 0));
                 break;
             case R.id.bt_cost1:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 1));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 1));
                 break;
             case R.id.bt_cost2:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 2));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 2));
                 break;
             case R.id.bt_cost3:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 3));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 3));
                 break;
             case R.id.bt_cost4:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 4));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 4));
                 break;
             case R.id.bt_cost5:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 5));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 5));
                 break;
             case R.id.bt_cost6:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 6));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 6));
                 break;
             case R.id.bt_cost7plus:
-                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("druid", 7));
+                ft.replace(R.id.fl_fragment, cardsFragment.newInstance("paladin", 7));
                 break;
 
         }

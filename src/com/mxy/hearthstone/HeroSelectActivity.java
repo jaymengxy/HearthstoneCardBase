@@ -6,10 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-import com.mxy.hearthstone.hero.DruidActivity;
-import com.mxy.hearthstone.hero.MageActivity;
-import com.mxy.hearthstone.hero.PriestActivity;
-import com.mxy.hearthstone.hero.WarriorActivity;
+import com.mxy.hearthstone.hero.*;
 
 /**
  * Created by SinTi on 2014/8/17.
@@ -35,7 +32,9 @@ public class HeroSelectActivity extends Activity {
     }
 
     public void showPaladinCards(View view) {
-        Toast.makeText(this, "展示圣骑士卡牌", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, PaladinActivity.class);
+        startActivity(intent);
     }
 
     public void showMageCards(View view) {

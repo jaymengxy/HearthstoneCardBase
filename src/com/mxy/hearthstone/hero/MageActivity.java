@@ -10,7 +10,7 @@ import com.mxy.hearthstone.R;
 import com.mxy.hearthstone.fragment.CardsFragment;
 
 /**
- * 战士
+ * 法师
  */
 public class MageActivity extends Activity {
 

@@ -24,7 +24,7 @@
                     android:layout_height="match_parent"
                     android:text="法师"
                     android:textSize="20sp"
-                    android:textColor="#ff2bd5ff"
+                    android:textColor="#ff00ade2"
                     android:gravity="right|center_vertical"
                     />
 
@@ -214,7 +214,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:text="火焰冲击："
-                                    android:textColor="#ff2bd5ff"
+                                    android:textColor="#ff00ade2"
                                     android:textSize="22sp"
                                     android:gravity="center"
                                     />
