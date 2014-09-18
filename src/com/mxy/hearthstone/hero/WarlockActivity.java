@@ -10,7 +10,7 @@ import com.mxy.hearthstone.R;
 import com.mxy.hearthstone.fragment.CardsFragment;
 
 /**
- * 法师
+ * 术士
  */
 public class WarlockActivity extends Activity {
 

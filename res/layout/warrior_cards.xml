@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/warrior_cards_bg">
+
+    <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <Button
+                android:background="@drawable/cost_all_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_costAll"
+                />
+
+        <Button
+                android:background="@drawable/cost_0_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost0"
+                />
+
+        <Button
+                android:background="@drawable/cost_1_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost1"
+                />
+
+        <Button
+                android:background="@drawable/cost_2_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost2"
+                />
+
+        <Button
+                android:background="@drawable/cost_3_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost3"
+                />
+
+        <Button
+                android:background="@drawable/cost_4_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost4"
+                />
+
+        <Button
+                android:background="@drawable/cost_5_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost5"
+                />
+
+
+        <Button
+                android:background="@drawable/cost_6_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost6"
+                />
+
+        <Button
+                android:background="@drawable/cost_7plus_button"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:onClick="costClick"
+                android:id="@+id/bt_cost7plus"
+                />
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/fl_fragment"
+            >
+
+        <ScrollView
+                android:id="@+id/sv_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+        </ScrollView>
+
+    </FrameLayout>
+</LinearLayout>

@@ -22,11 +22,14 @@ public class WarriorActivity extends Activity {
     //private static String path = "/data/data/com.mxy.hearthstone/db/data.db";
     //public static SQLiteDatabase db;
     private ScrollView sv_fragment;
+    private WarriorSlideView warrior_sv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //db = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READONLY);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.warrior);
+
+        warrior_sv = (WarriorSlideView) findViewById(R.id.warrior_sv);
         sv_fragment = (ScrollView) findViewById(R.id.sv_fragment);
     }
 /*
