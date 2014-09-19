@@ -22,10 +22,6 @@
         <activity android:name=".HeroSelectActivity"/>
         <activity android:name=".QualitySelectActivity"/>
         <activity android:name=".TypeSelectActivity"/>
-        <activity android:name=".HeroActivity"/>
-        <activity android:name=".hero.PriestActivity"/>
-        <activity android:name=".hero.MageActivity"/>
-        <activity android:name=".hero.DruidActivity"/>
-        <activity android:name=".hero.WarlockActivity"/>
+        <activity android:name=".hero.HeroActivity"/>
     </application>
 </manifest>

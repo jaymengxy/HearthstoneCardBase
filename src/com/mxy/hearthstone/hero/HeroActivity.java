@@ -1,4 +1,4 @@
-package com.mxy.hearthstone;
+package com.mxy.hearthstone.hero;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import com.mxy.hearthstone.R;
 import com.mxy.hearthstone.fragment.CardsFragment;
-import com.mxy.hearthstone.hero.HeroSlideView;
 
 
 public class HeroActivity extends Activity {
@@ -18,7 +18,7 @@ public class HeroActivity extends Activity {
     //private static String path = "/data/data/com.mxy.hearthstone/db/data.db";
     //public static SQLiteDatabase db;
     private ScrollView sv_fragment;
-    private HeroSlideView warrior_sv;
+    private HeroSlideView hero_sv;
     private String hero;
     private LinearLayout hero_description;
     private LinearLayout hero_cards;
@@ -38,17 +38,20 @@ public class HeroActivity extends Activity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         setContentView(R.layout.hero);
-        warrior_sv = (HeroSlideView) findViewById(R.id.warrior_sv);
+        hero_sv = (HeroSlideView) findViewById(R.id.hero_sv);
 
         hero_description = (LinearLayout) findViewById(R.id.hero_description);
         hero_cards = (LinearLayout) findViewById(R.id.hero_cards);
         switch (intent.getIntExtra("heroNum", 0)) {
             case HUNTER:
                 hero = "hunter";
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.hunter_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.hunter_cards_bg));
                 break;
             case SHAMAN:
                 hero = "shaman";
-                hero_cards.setBackground(getResources().getDrawable(R.drawable.shaman_bg));
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.shaman_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.shaman_cards_bg));
                 break;
             case PALADIN:
                 hero = "paladin";
@@ -57,7 +60,8 @@ public class HeroActivity extends Activity {
                 break;
             case MAGE:
                 hero = "mage";
-                hero_cards.setBackground(getResources().getDrawable(R.drawable.mage_bg));
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.mage_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.mage_cards_bg));
                 break;
             case WARRIOR:
                 hero = "warrior";
@@ -66,22 +70,27 @@ public class HeroActivity extends Activity {
                 break;
             case DRUID:
                 hero = "druid";
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.druid_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.druid_cards_bg));
                 break;
             case WARLOCK:
                 hero = "warlock";
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.warlock_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.warlock_cards_bg));
                 break;
             case PRIEST:
                 hero = "priest";
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.priest_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.priest_cards_bg));
                 break;
             case ROGUE:
                 hero = "rogue";
+                hero_description = (LinearLayout) View.inflate(hero_description.getContext(), R.layout.rogue_description, hero_description);
+                hero_cards.setBackground(getResources().getDrawable(R.drawable.rogue_cards_bg));
                 break;
         }
         sv_fragment = (ScrollView) findViewById(R.id.sv_fragment);
     }
-
-
-
 /*
 
     @Override
