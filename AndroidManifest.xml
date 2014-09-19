@@ -22,11 +22,10 @@
         <activity android:name=".HeroSelectActivity"/>
         <activity android:name=".QualitySelectActivity"/>
         <activity android:name=".TypeSelectActivity"/>
-        <activity android:name=".hero.WarriorActivity"/>
+        <activity android:name=".HeroActivity"/>
         <activity android:name=".hero.PriestActivity"/>
         <activity android:name=".hero.MageActivity"/>
         <activity android:name=".hero.DruidActivity"/>
-        <activity android:name=".hero.PaladinActivity"/>
         <activity android:name=".hero.WarlockActivity"/>
     </application>
 </manifest>

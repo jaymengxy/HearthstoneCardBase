@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.mxy.hearthstone.utils.ScrollerUtil;
 
 
-public class WarriorSlideView extends ViewGroup {
+public class HeroSlideView extends ViewGroup {
 
     private ScrollerUtil scroller;
     private View description;
@@ -26,7 +26,7 @@ public class WarriorSlideView extends ViewGroup {
      */
     private int curIndex;
 
-    public WarriorSlideView(Context context, AttributeSet attrs) {
+    public HeroSlideView(Context context, AttributeSet attrs) {
         super(context, attrs);
         ctx = context;
         init();
@@ -201,11 +201,10 @@ public class WarriorSlideView extends ViewGroup {
         //scrollTo(curIndex*getWidth(),0);
 
         int distance = curIndex * getWidth() - getScrollX();// 移动的距离 = 目标位置 - 当前的位置
-
         scroller.startScroll(getScrollX(), 0, distance, 0);
 
 		/*
-		 * invalidate 刷新页面视图  会导致 computeScroll 方法的执行
+         * invalidate 刷新页面视图  会导致 computeScroll 方法的执行
 		 */
         invalidate();
     }

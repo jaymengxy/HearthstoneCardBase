@@ -4,13 +4,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <com.mxy.hearthstone.hero.WarriorSlideView
+    <com.mxy.hearthstone.hero.HeroSlideView
             android:id="@+id/warrior_sv"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <include layout="@layout/warrior_cards"/>
+        <include layout="@layout/hero_cards"/>
 
-        <include layout="@layout/warrior_description"/>
-    </com.mxy.hearthstone.hero.WarriorSlideView>
+        <include layout="@layout/hero_description"/>
+    </com.mxy.hearthstone.hero.HeroSlideView>
 </RelativeLayout>
