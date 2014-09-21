@@ -4,7 +4,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/shaman_bg">
+              android:background="@drawable/hunter_bg">
 
     <LinearLayout
             android:layout_weight="1"
@@ -16,9 +16,9 @@
                 android:layout_weight="2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="牧师"
+                android:text="萨满祭司"
                 android:textSize="20sp"
-                android:textColor="#ffa900e8"
+                android:textColor="#ff194dcc"
                 android:gravity="right|center_vertical"
                 />
 
@@ -27,9 +27,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:text="安杜因•乌瑞恩"
+                android:text="萨尔"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="28sp"
                 android:gravity="center_vertical"
                 />
@@ -53,8 +53,8 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="我们知道你现在的想法：他是个牧师，那么他要如何击败我呢？就靠它的治疗技能？没错，安杜因的套牌中确实有许多强力而特别的治疗法术，然而他的暗影法术会立即让你大惊失色，然后，他能够使用诸如精神控制这样强大的控场法术击败你，而给于你最后一击的，可能还是你自己的随从。"
-                        android:textColor="#ff000000"
+                        android:text="当一个萨满凭一己之力将整个世界多次从彻底崩坏的边缘拯救出来之后，他下一步会做什么呢？当然是到旅店里坐下来玩玩牌啦！萨尔的套牌仿佛是一个锦囊，包含着各种增强卡牌、伤害法术、治疗法术以及各种凶悍的随从。在和这位部落前任大酋长对战时，他看似均衡却全面的法术和随从组合总是能够出奇制胜。"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="15sp"
                         />
 
@@ -69,7 +69,7 @@
                             android:layout_height="wrap_content"
                             android:text="英雄技能"
                             android:textStyle="bold"
-                            android:textColor="@android:color/black"
+                            android:textColor="@android:color/white"
                             android:textSize="23sp"
                             android:gravity="center"
                             />
@@ -79,7 +79,7 @@
                             android:layout_toRightOf="@id/tv_l"
                             android:layout_alignParentRight="true"
                             android:layout_width="match_parent"
-                            android:background="@android:color/holo_blue_light"
+                            android:background="@android:color/darker_gray"
                             android:layout_height="1dp"/>
                 </RelativeLayout>
 
@@ -98,8 +98,8 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="次级治疗术："
-                            android:textColor="#ffa900e8"
+                            android:text="召唤图腾："
+                            android:textColor="#ff194dcc"
                             android:textSize="22sp"
                             android:gravity="center"
                             />
@@ -108,8 +108,8 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:textColor="@android:color/black"
-                            android:text="恢复2点生命值"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="随机召唤一个图腾"
                             android:textSize="22sp"
                             android:gravity="center"
                             />
@@ -118,7 +118,7 @@
                 <View
                         android:layout_marginTop="11sp"
                         android:layout_width="match_parent"
-                        android:background="@android:color/holo_blue_light"
+                        android:background="@android:color/darker_gray"
                         android:layout_height="1dp"/>
 
                 <TextView
@@ -127,7 +127,7 @@
                         android:layout_height="wrap_content"
                         android:text="特性简介"
                         android:textStyle="bold"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="23sp"
                         android:gravity="center|left"
                         />
@@ -136,8 +136,8 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="安度因的治疗能力十分强大，可以很好的保证自己和随从的存活。他能使用真言术：盾等卡牌来提高随从的生命上限，也能用群体驱散来沉默对手所有的随从，甚至能使用神圣新星来同时达到群体治疗和AOE的效果。但牧师们往往光影相生，如有必要，安度因也可以使用暗影天赋来进行战斗，将治疗天赋变为强大的进攻能力。 "
-                        android:textColor="@android:color/black"
+                        android:text="英雄技能稳固射击能固定地对敌方英雄造成伤害，奥术射击、多重射击等法术卡也能带来可观的输出。作为奥秘卡的爆炸陷阱、冰冻陷阱等，经常能带来意想不到的收获。而作为一个猎人，最可怕的并不是这些——猎人可是万兽之王！雷克萨的增强法术能够将最弱小的野兽随从变成杀戮机器，甚至召唤出传说中的古老暴龙王！而他箭筒里暗藏着的各种直接攻击法术则能消灭任何阻挡他的野兽前进的敌人。狩猎开始了！"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="15sp"
                         />
 

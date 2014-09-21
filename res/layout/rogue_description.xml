@@ -16,9 +16,9 @@
                 android:layout_weight="2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="牧师"
+                android:text="潜行者"
                 android:textSize="20sp"
-                android:textColor="#ffa900e8"
+                android:textColor="#ffb9e812"
                 android:gravity="right|center_vertical"
                 />
 
@@ -27,9 +27,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:text="安杜因•乌瑞恩"
+                android:text="瓦莉拉•萨古纳尔"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="28sp"
                 android:gravity="center_vertical"
                 />
@@ -53,8 +53,8 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="我们知道你现在的想法：他是个牧师，那么他要如何击败我呢？就靠它的治疗技能？没错，安杜因的套牌中确实有许多强力而特别的治疗法术，然而他的暗影法术会立即让你大惊失色，然后，他能够使用诸如精神控制这样强大的控场法术击败你，而给于你最后一击的，可能还是你自己的随从。"
-                        android:textColor="#ff000000"
+                        android:text="潜行者们总是善于偷袭、刺探和诡计，而瓦莉拉也不例外。这不仅仅是因为她的套牌中含有出色的直接攻击法术和强力的移除手段，她的卡牌之间还能打出连击效果，造成极为致命的威胁。更糟糕的是（对于他的对手而言），她能够掏出暗藏的匕首，这意味着在必要时，她会亲自来到战场上，把一些麻烦的随从轻易地解决掉。"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="15sp"
                         />
 
@@ -69,7 +69,7 @@
                             android:layout_height="wrap_content"
                             android:text="英雄技能"
                             android:textStyle="bold"
-                            android:textColor="@android:color/black"
+                            android:textColor="@android:color/white"
                             android:textSize="23sp"
                             android:gravity="center"
                             />
@@ -79,7 +79,7 @@
                             android:layout_toRightOf="@id/tv_l"
                             android:layout_alignParentRight="true"
                             android:layout_width="match_parent"
-                            android:background="@android:color/holo_blue_light"
+                            android:background="@android:color/darker_gray"
                             android:layout_height="1dp"/>
                 </RelativeLayout>
 
@@ -98,8 +98,8 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="次级治疗术："
-                            android:textColor="#ffa900e8"
+                            android:text="匕首精通："
+                            android:textColor="#ffb9e812"
                             android:textSize="22sp"
                             android:gravity="center"
                             />
@@ -108,8 +108,8 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:textColor="@android:color/black"
-                            android:text="恢复2点生命值"
+                            android:textColor="@android:color/darker_gray"
+                            android:text="装备一把1/2的匕首"
                             android:textSize="22sp"
                             android:gravity="center"
                             />
@@ -118,7 +118,7 @@
                 <View
                         android:layout_marginTop="11sp"
                         android:layout_width="match_parent"
-                        android:background="@android:color/holo_blue_light"
+                        android:background="@android:color/darker_gray"
                         android:layout_height="1dp"/>
 
                 <TextView
@@ -127,7 +127,7 @@
                         android:layout_height="wrap_content"
                         android:text="特性简介"
                         android:textStyle="bold"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="23sp"
                         android:gravity="center|left"
                         />
@@ -136,8 +136,8 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="安度因的治疗能力十分强大，可以很好的保证自己和随从的存活。他能使用真言术：盾等卡牌来提高随从的生命上限，也能用群体驱散来沉默对手所有的随从，甚至能使用神圣新星来同时达到群体治疗和AOE的效果。但牧师们往往光影相生，如有必要，安度因也可以使用暗影天赋来进行战斗，将治疗天赋变为强大的进攻能力。 "
-                        android:textColor="@android:color/black"
+                        android:text="瓦莉拉•萨古纳尔是一名出色的潜行者，匕首精通配合她的毒药，能让武器伤害变得异常恐怖。瓦莉拉的战斗以快节奏著称，众多低耗费的卡牌让她习惯于速战速决。而潜行者所独具的特色——连击，更可以为她带来强大的爆发和意想不到的收获。如果你喜欢干脆利落、不给对手任何喘息机会的战斗，瓦莉拉是你最好的选择！\n连击：当你在使用带有连击效果的卡牌前已经使用过其他卡牌（任何类型，例如法术、武器、随从等），那么就会触发连击效果。"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="15sp"
                         />
 
